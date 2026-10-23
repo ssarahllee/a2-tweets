@@ -95,13 +95,24 @@ class Tweet {
     // get remaining text after the unit
     const afterUnit = lower.substring(distanceIndex + 4).trim();
     // get specific activity after the unit
-    const activity = afterUnit.split(" ")[0];
+    //const activity = afterUnit.split(" ")[0];
+    const activity = afterUnit.split(" with ")[0].split("-")[0].trim();
+    if (activity == "activity") {
+      return "unknown";
+    }
+    return activity;
+    /*
     if (activity.startsWith("run")) return "run";
     if (activity.startsWith("walk")) return "walk";
     if (activity.startsWith("bike") || activity.startsWith("cycl"))
       return "bike";
+    if (activity.startsWith("hike")) return "hike";
+    if (activity.startsWith("swim")) return "swim";
+    if (activity.startsWith("ski")) return "ski";
+    if (activity.startsWith("row")) return "row";
+    if (activity.startsWith("elliptical")) return "elliptical";
 
-    return "unknown";
+    return "unknown"; */
   }
 
   get distance(): number {
