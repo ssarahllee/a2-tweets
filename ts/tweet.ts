@@ -12,19 +12,19 @@ class Tweet {
     //TODO: identify whether the source is a live event, an achievement, a completed event, or miscellaneous.
     // live event
     if (
-      this.text.includes("Just completed") ||
-      this.text.includes("Just posted")
+      this.text.startsWith("Just completed") ||
+      this.text.startsWith("Just posted")
     ) {
-      if (
-        this.text.startsWith("Just completed") ||
-        this.text.startsWith("Just posted")
-      ) {
-        return "completed_event";
-      }
-
       return "completed_event";
+    } else if (
+      this.text.includes("Runkeeper Live") ||
+      this.text.startsWith("Watch my")
+    ) {
+      return "live_event";
+    } else if (this.text.startsWith("Achieved")) {
+      return "achievement";
     }
-    return "unknown";
+    return "miscellaneous";
   }
 
   //returns a boolean, whether the text includes any content written by the person tweeting.

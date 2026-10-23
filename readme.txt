@@ -18,6 +18,7 @@ https://www.w3schools.com/js/js_varletconst.asp
 https://www.w3schools.com/jsref/jsref_startswith.asp
 https://www.w3schools.com/jsref/jsref_endswith.asp
 https://www.w3schools.com/jsref/jsref_includes.asp 
+https://www.w3schools.com/JSREF/jsref_tofixed.asp
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 

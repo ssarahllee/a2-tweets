@@ -4,7 +4,6 @@ function parseTweets(runkeeper_tweets) {
     window.alert("No tweets returned");
     return;
   }
-
   tweet_array = runkeeper_tweets.map(function (tweet) {
     return new Tweet(tweet.text, tweet.created_at);
   });
@@ -13,6 +12,7 @@ function parseTweets(runkeeper_tweets) {
   //It works correctly, your task is to update the text of the other tags in the HTML file!
   document.getElementById("numberTweets").innerText = tweet_array.length;
   updateDates(tweet_array);
+  tweetCategory(tweet_array);
 }
 
 //Wait for the DOM to load
@@ -50,4 +50,48 @@ function updateDates(tweets) {
     "en-US",
     options,
   );
+}
+
+function tweetCategory(tweets) {
+  let completed = 0;
+  let live = 0;
+  let achievement = 0;
+  let miscellaneous = 0;
+  let category = 0;
+  for (let i = 0; i < tweets.length; i++) {
+    category = tweets[i].source;
+    if (category == "completed_event") {
+      completed++;
+    } else if (category == "live_event") {
+      live++;
+    } else if (category == "achievement") {
+      achievement++;
+    } else if (category == "miscellaneous") {
+      miscellaneous++;
+    }
+  }
+  // console.log(completed); 7982
+  // console.log(live); 141
+  // console.log(achievement); 56
+  // console.log(miscellaneous); 68
+
+  // calculating percentagtes
+  let completedPercent = ((completed / tweets.length) * 100).toFixed(2);
+  let livePercent = ((live / tweets.length) * 100).toFixed(2);
+  let achievedPercent = ((achievement / tweets.length) * 100).toFixed(2);
+  let miscPercent = ((miscellaneous / tweets.length) * 100).toFixed(2);
+  // display total counts
+  document.getElementsByClassName("completedEvents")[0].innerText = completed;
+  document.getElementsByClassName("liveEvents")[0].innerText = live;
+  document.getElementsByClassName("achievements")[0].innerText = achievement;
+  document.getElementsByClassName("miscellaneous")[0].innerText = miscellaneous;
+  // display percentages
+  document.getElementsByClassName("completedEventsPct")[0].innerText =
+    completedPercent + "%";
+  document.getElementsByClassName("liveEventsPct")[0].innerText =
+    livePercent + "%";
+  document.getElementsByClassName("achievementsPct")[0].innerText =
+    achievedPercent + "%";
+  document.getElementsByClassName("miscellaneousPct")[0].innerText =
+    miscPercent + "%";
 }
