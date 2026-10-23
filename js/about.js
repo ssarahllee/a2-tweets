@@ -13,6 +13,7 @@ function parseTweets(runkeeper_tweets) {
   document.getElementById("numberTweets").innerText = tweet_array.length;
   updateDates(tweet_array);
   tweetCategory(tweet_array);
+  writtenTweets(tweet_array);
 }
 
 //Wait for the DOM to load
@@ -94,4 +95,22 @@ function tweetCategory(tweets) {
     achievedPercent + "%";
   document.getElementsByClassName("miscellaneousPct")[0].innerText =
     miscPercent + "%";
+}
+
+function writtenTweets(tweets) {
+  let completed = 0;
+  let written = 0;
+  for (let i = 0; i < tweets.length; i++) {
+    if (tweets[i].source == "completed_event") {
+      completed++;
+      if (tweets[i].written == true) {
+        written++;
+      }
+    }
+  }
+  const writtenPercent = ((written / completed) * 100).toFixed(2);
+  document.getElementsByClassName("completedEvents")[1].innerText = completed;
+  document.getElementsByClassName("written")[0].innerText = written;
+  document.getElementsByClassName("writtenPct")[0].innerText =
+    writtenPercent + "%";
 }

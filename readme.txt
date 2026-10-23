@@ -1,9 +1,9 @@
---Readme document for *YOUR NAME*, *YOUR_EMAIL@uci.edu*--
+--Readme document for Sarah Lee, sarahsl7@uci.edu--
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
 */10
-- */3 Summarizing tweets
+- 3/3 Summarizing tweets
 - */4 Identifying the most popular activities
 - */3 Adding a text search interface
 
@@ -19,10 +19,15 @@ https://www.w3schools.com/jsref/jsref_startswith.asp
 https://www.w3schools.com/jsref/jsref_endswith.asp
 https://www.w3schools.com/jsref/jsref_includes.asp 
 https://www.w3schools.com/JSREF/jsref_tofixed.asp
+https://www.w3schools.com/jsref/jsref_slice_string.asp
+https://www.w3schools.com/jsref/jsref_split.asp
+https://www.w3schools.com/jsref/jsref_join.asp 
+geeksforgeeks.org/javascript/javascript-program-to-convert-kilometers-to-miles/ 
+I used Generative AI to help me set up my workspace, help me to understand my bugs, and point me to specific parts of the 
+w3schools website that I was trying to navigate through to understand how to utilize javascript methods.
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
-
-
+N/A
 
 5. Is there anything special we need to know in order to run your code?
-
+N/A
