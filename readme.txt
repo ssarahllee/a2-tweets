@@ -12,8 +12,12 @@
 
 
 3. What online resources did you consult when completing this assignment? (list sites like StackOverflow or specific URLs for tutorials; describe queries to Generative AI or use of AI-based code completion)
-
-
+https://www.w3schools.com/js/js_dates.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+https://www.w3schools.com/js/js_varletconst.asp 
+https://www.w3schools.com/jsref/jsref_startswith.asp
+https://www.w3schools.com/jsref/jsref_endswith.asp
+https://www.w3schools.com/jsref/jsref_includes.asp 
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 
