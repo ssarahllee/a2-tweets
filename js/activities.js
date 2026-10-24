@@ -182,7 +182,7 @@ function parseTweets(runkeeper_tweets) {
   document.getElementById("aggregate").onclick = function () {
     meanChart = !meanChart;
 
-    if (meanChart == false) {
+    if (meanChart == true) {
       vegaEmbed("#distanceVis", mean_vis_spec, { actions: false });
       document.getElementById("aggregate").innerText = "Show all activities";
     } else {

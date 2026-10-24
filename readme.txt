@@ -24,10 +24,11 @@ https://www.w3schools.com/jsref/jsref_split.asp
 https://www.w3schools.com/jsref/jsref_join.asp 
 geeksforgeeks.org/javascript/javascript-program-to-convert-kilometers-to-miles/ 
 I used Generative AI to help me set up my workspace, help me to understand my bugs, and point me to specific parts of the 
-w3schools website that I was trying to navigate through to understand how to utilize javascript methods.
+w3schools website that I was trying to navigate through to understand how to utilize javascript methods. It also helped me to download typescript and navigate live server.
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
-N/A
+I talked to one classmate to discuss our percentages and compare results.
 
 5. Is there anything special we need to know in order to run your code?
 N/A
+*Just a note, I got my percentages & number of activities confirmed by the TA that they are correct.
