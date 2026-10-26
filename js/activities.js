@@ -26,12 +26,15 @@ function parseTweets(runkeeper_tweets) {
     }
   }
   console.log(activityCount);
+  const activitiesSorted = Object.keys(activityCount).sort(function (a, b) {
+    return activityCount[b] - activityCount[a];
+  });
 
   document.getElementById("numberActivities").innerText =
     Object.keys(activityCount).length;
-  document.getElementById("firstMost").innerText = "run";
-  document.getElementById("secondMost").innerText = "walk";
-  document.getElementById("thirdMost").innerText = "bike";
+  document.getElementById("firstMost").innerText = activitiesSorted[0];
+  document.getElementById("secondMost").innerText = activitiesSorted[1];
+  document.getElementById("thirdMost").innerText = activitiesSorted[2];
   document.getElementById("longestActivityType").innerText = "bike";
   document.getElementById("shortestActivityType").innerText = "walk";
   document.getElementById("weekdayOrWeekendLonger").innerText = "weekends";
